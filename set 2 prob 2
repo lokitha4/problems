@@ -1,2 +1,16 @@
 Write a program to take x and print multiples of x till 1000.
 ans:
+import java.util.Scanner;
+
+public class MultiplesOfX {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int x = scanner.nextInt();
+        scanner.close();
+        
+        for (int i = x; i <= 1000; i += x) {
+            System.out.println(i);
+        }
+    }
+}
