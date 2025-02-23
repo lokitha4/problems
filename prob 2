@@ -1,0 +1,27 @@
+ Write a program to check whether a triangle can be formed with the given values for the angles.
+ ans:
+ import java.util.Scanner;
+
+public class TriangleChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input three angles
+        System.out.print("Enter the three angles of the triangle: ");
+        int angle1 = scanner.nextInt();
+        int angle2 = scanner.nextInt();
+        int angle3 = scanner.nextInt();
+
+        // Calculate the sum of the angles
+        int sum = angle1 + angle2 + angle3;
+
+        // Check if the sum is equal to 180 and all angles are positive
+        if (sum == 180 && angle1 > 0 && angle2 > 0 && angle3 > 0) {
+            System.out.println("Triangle can be formed");
+        } else {
+            System.out.println("Triangle cannot be formed");
+        }
+
+        scanner.close();
+    }
+}
